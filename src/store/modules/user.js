@@ -39,7 +39,7 @@ const user = {
       const username = userInfo.userName.trim()
       return new Promise((resolve, reject) => {
         login(username, userInfo.passWord).then(response => {
-          const data = response.Data
+          const data = response
           setToken(data.CustomerCode)
           console.log(data.CustomerName);
           commit('SET_TOKEN', data.CustomerCode)

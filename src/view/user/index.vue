@@ -4,7 +4,7 @@
       <cell title="头像" :value="customerEntity.Avatar" is-link>
         <img :src="this.customerEntity.Avatar" class="user_image circle">
       </cell>
-      <cell title="姓名"  :value="customerEntity.CustomerName" is-link></cell>
+      <cell title="姓名" :value="customerEntity.CustomerName" is-link></cell>
       <cell title="性别" :value="customerEntity.SexText" is-link></cell>
       <cell title="出生年月" :value="customerEntity.Birthday" is-link></cell>
       <cell title="身份证号" :value="customerEntity.IDCardNum" is-link></cell>
@@ -60,7 +60,8 @@ export default {
             this.customerEntity.HomeAddress,
             10
           );
-          this.customerEntity.Avatar="http://192.168.0.253:10029/"+this.customerEntity.PhotoPath
+          this.customerEntity.Avatar =
+            this.$weburl + "/" + this.customerEntity.PhotoPath;
         })
         .catch(err => {
           this.$vux.toast.text(err);

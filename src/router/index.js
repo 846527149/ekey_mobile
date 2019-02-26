@@ -36,6 +36,14 @@ export default new Router({
       }
     },
     {
+      path: '/news',
+      name: 'news',
+      component:() => import('@/view/news/index'),
+      meta: {
+        title: '新闻资讯'
+      }
+    },
+    {
       path: '*',
       component: login,
       meta: {

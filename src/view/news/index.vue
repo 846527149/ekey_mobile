@@ -3,7 +3,7 @@
  * @LastEditors: yongwei.hou
  * @Description: 新闻资讯首页
  * @Date: 2019-02-26 14:02:50
- * @LastEditTime: 2019-02-26 17:10:45
+ * @LastEditTime: 2019-02-26 17:14:54
  -->
 <template>
   <div>
@@ -54,7 +54,7 @@ export default {
       getNewsTag()
         .then(response => {
           this.newsTagList = response.TagList;
-          this.pageEntity.tagCode = this.tagIndex;
+          this.pageEntity.tagCode =this.tagIndex;
         })
         .then(response => {
           this.setNewsList();

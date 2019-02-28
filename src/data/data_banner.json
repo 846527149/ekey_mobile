@@ -1,0 +1,9 @@
+{
+  "banner": [{
+    "url": "/demo",
+    "img": "./static/images/banner1.png"
+  }, {
+    "url": "/demo",
+    "img": "./static/images/banner2.png"
+  }]
+}

@@ -1,0 +1,36 @@
+{
+  "menu": [{
+      "img": "./static/images/ic_home_fuction_phy.png",
+      "url": "/demo",
+      "title": "个性化体检"
+    }, {
+      "img": "./static/images/ic_home_fuction_rep.png",
+      "url": "/demo",
+      "title": "报告查询"
+    }, {
+      "img": "./static/images/ic_home_fuction_data.png",
+      "url": "/demo",
+      "title": "团检个性化"
+    }, {
+      "img": "./static/images/ic_home_fuction_heal.png",
+      "url": "/demo",
+      "title": "健康管理"
+    }, {
+      "img": "./static/images/ic_home_fuction_len.png",
+      "url": "/demo",
+      "title": "慢病管理"
+    }, {
+      "img": "./static/images/ic_home_fuction_pgs.png",
+      "url": "/demo",
+      "title": "疾病筛查"
+    }, {
+      "img": "./static/images/ic_home_fuction_etv.png",
+      "url": "/demo",
+      "title": "日常随访"
+    }, {
+      "img": "./static/images/ic_home_fuction_con.png",
+      "url": "/demo",
+      "title": "健康咨询"
+    }
+  ]
+}

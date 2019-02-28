@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import login from '@/view/login/login'
 import demo from '@/view/demo'
+import index from '@/view/index'
+
 
 
 Vue.use(Router)
@@ -11,8 +13,17 @@ export default new Router({
   scrollBehavior: () => ({
     y: 0
   }),
-  routes: [{
-      path: '/',
+  routes: [
+    {
+      path: '/index',
+      name: 'index',
+      component: index,
+      meta: {
+        title: 'index'
+      }
+    },
+    {
+      path: '/login',
       name: 'login',
       component: login,
       meta: {
@@ -45,7 +56,7 @@ export default new Router({
     },
     {
       path: '*',
-      component: login,
+      component: index,
       meta: {
         title: '首页'
       }

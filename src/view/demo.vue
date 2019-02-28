@@ -3,17 +3,24 @@
  * @LastEditors: yongwei.hou
  * @Description:
  * @Date: 2019-02-22 17:37:39
- * @LastEditTime: 2019-02-26 14:02:11
+ * @LastEditTime: 2019-02-27 19:02:48
  -->
 
 <template>
   <div>
-    <group title="禁用内置验证及显示成功或者错误样式">
+    <group>
       <x-input title="当前账号" v-model="customerName"></x-input>
     </group>
     <ul id="example-1">
       <li v-for="(item,index) in newsList" :key="index">{{ item.Title }}</li>
     </ul>
+    <input
+      type="file"
+      @change="uploadImage"
+      ref="inputer"
+      multiple
+      accept="image/png, image/jpeg, image/gif, image/jpg"
+    >
   </div>
 </template>
 
@@ -38,16 +45,11 @@ export default {
     this.customerName = getToken();
   },
   methods: {
-    setNewsList() {
-      let page = 1;
-      getNewsList(page)
-        .then(response => {
-          this.newsList = response.Items;
-          console.log(response);
-        })
-        .catch(err => {
-          alert(err);
-        });
+    uploadImage(event) {
+      let inputDOM = this.$refs.inputer;
+      // 通过DOM取文件数据
+      this.fil = inputDOM.files;
+      debugger;
     }
   }
 };
